@@ -27,7 +27,7 @@ include('layout/sidebar.php');
     <div class="col-md-12 col-sm-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>Data Merek</h2>
+                <h2>Tambah Merek</h2>
                 <!-- <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -44,37 +44,30 @@ include('layout/sidebar.php');
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
-
-            <a href="admin_add_merek.php" class="btn btn-sm btn-primary">Tambah</a>
-
-            <br>
-            
-            <table id="datatable" class="table table-striped table-bordered" style="width:100%">
-                <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Nama Merek</th>
-                    <th>Pilihan</th>
-                </tr>
-                </thead>
-
-
-                <tbody>
-                <?php 
-                    $nomor = 0;
-                    $sqlmerek = "SELECT * FROM merek";
-                    $querymerek = mysqli_query($koneksidb,$sqlmerek);
-                    while ($result = mysqli_fetch_array($querymerek)) {
-                    $nomor++;
-                ?>
-                <tr>
-                    <td><?php echo htmlentities($nomor);?></td>
-                    <td><?php echo htmlentities($result['nama_merek']);?></td>
-                    <td><a href="admin_edit_merek.php?id=<?php echo $result['id_merek'];?>" class="btn btn-sm btn-warning">Edit</a> <a href="admin_del_merek.php?id=<?php echo $result['id_merek'];?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin akan menghapus <?php echo $result['nama_merek'];?>?');">Hapus</a></td>
-                </tr>
-                <?php }?>
-                </tbody>
-            </table>
+                <!-- Form Add -->
+                <form action="admin_addact_merek.php" method="POST" enctype='multipart/form-data' id='demo-form2' data-parsley-validate class='form-horizontal form-label-left'>
+                <div class="form-group row">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Nama Merek</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" class="form-control" name="nama_merek" required>
+                    </div>
+                </div>
+                <!-- <div class="form-group row">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Date Mask</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" class="form-control" data-inputmask="'mask': '99/99/9999'">
+                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                    </div>
+                </div> -->
+                <div class='ln_solid'></div>
+                <div class='form-group'>
+                    <div class='col-md-6 col-sm-6 col-xs-12 col-md-offset-3'>
+                    <button class='btn btn-sm btn-primary' type='button' onclick=self.history.back()>Cancel</button>
+                    <button class='btn btn-sm btn-primary' type='reset'>Reset</button>
+                    <button type='submit' class='btn btn-sm btn-success'>Submit</button>
+                    </div>
+                </div> 
+                </form>
 
             </div>
         </div>
