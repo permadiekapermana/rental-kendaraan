@@ -34,7 +34,7 @@
                   } elseif($_SESSION['role']=='pengelola'){
                   ?>
                   <li><a href="?module=dashboard"><i class="fa fa-home"></i> Dashboard</a></li>
-                  <li><a href="?module=dashboard"><i class="fa fa-car"></i> Data Mobil</a></li>
+                  <li><a href="pengelola_view_mobil.php"><i class="fa fa-car"></i> Data Mobil</a></li>
                   <li><a><i class="fa fa-money"></i> Data Sewa Mobil <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.html">Menunggu Pembayaran</a></li>

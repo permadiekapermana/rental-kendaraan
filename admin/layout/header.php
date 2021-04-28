@@ -1,5 +1,6 @@
 <?php
 include "../includes/config.php";
+include "../includes/format_rupiah.php";
 // error_reporting(0);
 session_start();
 if (empty($_SESSION['id_admin']) AND empty($_SESSION['id_pengelola'])){
