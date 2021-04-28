@@ -266,7 +266,7 @@ function valid(theform){
 													<label  for="inlineCheckbox3"> Brake Assist </label>
 												</div>
 											<?php } ?>
-											</div>
+										</div>
 									</div>
 									<div class="form-group">
 										<div class="col-sm-3">
