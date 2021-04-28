@@ -67,7 +67,7 @@ include('layout/sidebar.php');
                 <tbody>
                 <?php 
                     $nomor = 0;
-                    $sqlmobil = "SELECT mobil.*, merek.* FROM mobil, merek WHERE mobil.id_merek=merek.id_merek ORDER BY mobil.id_mobil ASC";
+                    $sqlmobil = "SELECT mobil.*, merek.* FROM mobil, merek WHERE mobil.id_merek=merek.id_merek AND mobil.id_pengelola=$_SESSION[id_pengelola] ORDER BY mobil.id_mobil ASC";
                     $querymobil = mysqli_query($koneksidb,$sqlmobil);
                     while ($result = mysqli_fetch_array($querymobil)){
                     $nomor++;
