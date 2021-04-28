@@ -13,7 +13,7 @@
                     </ul>
                   </li>
                   <li><a href="admin_view_merek.php"><i class="fa fa-car"></i> Data Merek</a></li>
-                  <li><a href="?module=dashboard"><i class="fa fa-gear"></i> Data Kategori</a></li>
+                  <li><a href="admin_view_kategori.php"><i class="fa fa-gear"></i> Data Kategori</a></li>
                   <li><a><i class="fa fa-money"></i> Data Sewa Mobil <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.html">Menunggu Pembayaran</a></li>
