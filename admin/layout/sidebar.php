@@ -5,11 +5,12 @@
                   <?php
                   if($_SESSION['role']=='admin'){
                   ?>
-                  <li><a href="?module=dashboard"><i class="fa fa-home"></i> Dashboard</a></li>
+                  <li><a href="dashboard.php"><i class="fa fa-home"></i> Dashboard</a></li>
                   <li><a><i class="fa fa-users"></i> Data User <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Data Admin</a></li>
-                      <li><a href="index2.html">Data Pengelola</a></li>
+                      <li><a href="dataadmin.php">Data Admin</a></li>
+                      <li><a href="datapengelola.php">Data Pengelola</a></li>
+                      <li><a href="datapelanggan.php">Data Pelanggan</a></li>
                     </ul>
                   </li>
                   <li><a href="admin_view_merek.php"><i class="fa fa-car"></i> Data Merek</a></li>
@@ -24,16 +25,16 @@
                   </li>                  
                   <li><a><i class="fa fa-gear"></i> Content Management <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Kritik dan Saran Pelanggan</a></li>
-                      <li><a href="index2.html">Kelola Halaman</a></li>
-                      <li><a href="index3.html">Info Kontak</a></li>
+                      <li><a href="kritik.php">Kritik dan Saran Pelanggan</a></li>
+                      <li><a href="manage-pages.php">Kelola Halaman</a></li>
+                      <li><a href="kontak.php">Info Kontak</a></li>
                     </ul>
                   </li>
-                  <li><a href="?module=dashboard"><i class="fa fa-file"></i> Laporan</a></li>
+                  <li><a href="laporan.php><i class="fa fa-file"></i> Laporan</a></li>
                   <?php
                   } elseif($_SESSION['role']=='pengelola'){
                   ?>
-                  <li><a href="?module=dashboard"><i class="fa fa-home"></i> Dashboard</a></li>
+                  <li><a href="dashboard.php"><i class="fa fa-home"></i> Dashboard</a></li>
                   <li><a href="pengelola_view_mobil.php"><i class="fa fa-car"></i> Data Mobil</a></li>
                   <li><a><i class="fa fa-money"></i> Data Sewa Mobil <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
