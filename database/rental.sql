@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2021 at 03:18 PM
+-- Generation Time: May 08, 2021 at 08:07 AM
 -- Server version: 10.4.18-MariaDB
--- PHP Version: 7.4.16
+-- PHP Version: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -236,15 +236,20 @@ CREATE TABLE `pengelola` (
   `email` varchar(30) NOT NULL,
   `password` varchar(40) NOT NULL,
   `telp` varchar(16) NOT NULL,
-  `alamat` varchar(255) NOT NULL
+  `alamat` varchar(255) NOT NULL,
+  `norek` varchar(40) NOT NULL,
+  `bank` varchar(40) NOT NULL,
+  `atas_nama` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `pengelola`
 --
 
-INSERT INTO `pengelola` (`id_pengelola`, `nama`, `email`, `password`, `telp`, `alamat`) VALUES
-(1, 'Pengelola', 'pengelola@gmail.com', '368545dfb9ea3a57d8014b7a41eaec52', '089', 'xxx');
+INSERT INTO `pengelola` (`id_pengelola`, `nama`, `email`, `password`, `telp`, `alamat`, `norek`, `bank`, `atas_nama`) VALUES
+(1, 'Pengelola', 'pengelola@gmail.com', '3c7913bc17671596a43dcb4581992bdf', '089', 'xxx', '', '', ''),
+(3, 'bayu', 'bayu@gmail.com', 'a430e06de5ce438d499c2e4063d60fd6', '888998989900', 'desdasa', '335553', 'bri', 'samud'),
+(4, 'samud', 'samud@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', '089878090', 'kuningan', '90080977797', 'bri', 'samud');
 
 -- --------------------------------------------------------
 
@@ -409,7 +414,7 @@ ALTER TABLE `mobil`
 -- AUTO_INCREMENT for table `pengelola`
 --
 ALTER TABLE `pengelola`
-  MODIFY `id_pengelola` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pengelola` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tblpages`
