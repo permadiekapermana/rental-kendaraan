@@ -5,7 +5,7 @@
                   <?php
                   if($_SESSION['role']=='admin'){
                   ?>
-                  <li><a href="dashboard.php"><i class="fa fa-home"></i> Dashboard</a></li>
+                  <li><a href="dashboard_admin.php"><i class="fa fa-home"></i> Dashboard</a></li>
                   <li><a><i class="fa fa-users"></i> Data User <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="dataadmin.php">Data Admin</a></li>
@@ -15,14 +15,14 @@
                   </li>
                   <li><a href="admin_view_merek.php"><i class="fa fa-car"></i> Data Merek</a></li>
                   <li><a href="admin_view_kategori.php"><i class="fa fa-gear"></i> Data Kategori</a></li>
-                  <li><a><i class="fa fa-money"></i> Data Sewa Mobil <span class="fa fa-chevron-down"></span></a>
+                  <!-- <li><a><i class="fa fa-money"></i> Data Sewa Mobil <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.html">Menunggu Pembayaran</a></li>
                       <li><a href="index2.html">Menunggu Konfirmasi</a></li>
                       <li><a href="index3.html">Pengembalian</a></li>
                       <li><a href="index3.html">Data Sewa</a></li>
                     </ul>
-                  </li>                  
+                  </li>                   -->
                   <li><a><i class="fa fa-gear"></i> Content Management <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="kritik.php">Kritik dan Saran Pelanggan</a></li>
@@ -30,7 +30,7 @@
                       <li><a href="kontak.php">Info Kontak</a></li>
                     </ul>
                   </li>
-                  <li><a href="laporan.php><i class="fa fa-file"></i> Laporan</a></li>
+                  <li><a href="laporan.php"><i class="fa fa-file"></i> Laporan</a></li>
                   <?php
                   } elseif($_SESSION['role']=='pengelola'){
                   ?>
