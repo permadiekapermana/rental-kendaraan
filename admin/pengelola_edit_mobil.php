@@ -144,22 +144,22 @@ include('layout/sidebar.php');
                 <div class="form-group row">
                     <div class="col-sm-4">
                         Gambar 1 <img src="img/vehicleimages/<?php echo htmlentities($result['image1']);?>" width="300" height="200" style="border:solid 1px #000">
-                        <a href="changeimage1.php?imgid=<?php echo htmlentities($result['id_mobil'])?>">Ganti Gambar 1</a>
+                        <a href="pengelola_changeimage1.php?imgid=<?php echo htmlentities($result['id_mobil'])?>" class='btn btn-sm btn-success mt-1'>Ganti Gambar 1</a>
                     </div>
                     <div class="col-sm-4">
                         Gambar 2<img src="img/vehicleimages/<?php echo htmlentities($result['image2']);?>" width="300" height="200" style="border:solid 1px #000">
-                        <a href="changeimage2.php?imgid=<?php echo htmlentities($result['id_mobil'])?>">Ganti Gambar 2</a>
+                        <a href="pengelola_changeimage2.php?imgid=<?php echo htmlentities($result['id_mobil'])?>" class='btn btn-sm btn-success mt-1'>Ganti Gambar 2</a>
                     </div>
                     <div class="col-sm-4">
                         Gambar 3<img src="img/vehicleimages/<?php echo htmlentities($result['image3']);?>" width="300" height="200" style="border:solid 1px #000">
-                        <a href="changeimage3.php?imgid=<?php echo htmlentities($result['id_mobil'])?>">Ganti Gambar 3</a>
+                        <a href="pengelola_changeimage3.php?imgid=<?php echo htmlentities($result['id_mobil'])?>" class='btn btn-sm btn-success mt-1'>Ganti Gambar 3</a>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <div class="col-sm-4">
                         Gambar 4<img src="img/vehicleimages/<?php echo htmlentities($result['image4']);?>" width="300" height="200" style="border:solid 1px #000">
-                        <a href="changeimage4.php?imgid=<?php echo htmlentities($result['id_mobil'])?>">Ganti Gambar 4</a>
+                        <a href="pengelola_changeimage4.php?imgid=<?php echo htmlentities($result['id_mobil'])?>" class='btn btn-sm btn-success mt-1'>Ganti Gambar 4</a>
                     </div>
                     <div class="col-sm-4">
                         Gambar 5
@@ -168,7 +168,7 @@ include('layout/sidebar.php');
                             echo htmlentities("File not available");
                         }else{?>
                             <img src="img/vehicleimages/<?php echo htmlentities($result['image5']);?>" width="300" height="200" style="border:solid 1px #000">
-                            <a href="changeimage5.php?imgid=<?php echo htmlentities($result['id_mobil'])?>">Ganti Gambar 5</a>
+                            <a href="pengelola_changeimage5.php?imgid=<?php echo htmlentities($result['id_mobil'])?>" class='btn btn-sm btn-success mt-1'>Ganti Gambar 5</a>
                         <?php } ?>
                     </div>
                 </div>
