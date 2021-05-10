@@ -39,6 +39,7 @@ if(mysqli_num_rows($query)>0){
   $_SESSION['email']=$results3['email'];
   $_SESSION['telp']=$results3['telp'];
   $_SESSION['alamat']=$results3['alamat'];
+
   echo "<script type='text/javascript'>window.top.location='admin/index.php';</script>";
 } else {
   echo "<script>alert('Email atau Password Salah!');</script>";
