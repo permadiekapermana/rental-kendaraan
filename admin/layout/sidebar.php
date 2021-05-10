@@ -100,10 +100,10 @@
                       <img src="production/images/img.jpg" alt=""> <?=$nama?>                      
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="javascript:;"> Profile</a>
+                      <!-- <a class="dropdown-item"  href="javascript:;"> Profile</a>
                         <a class="dropdown-item"  href="javascript:;">
                           <span>Ubah Password</span>
-                        </a>
+                        </a> -->
                       <a class="dropdown-item"  href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                     </div>
                   </li>
