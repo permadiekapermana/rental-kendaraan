@@ -1,4 +1,4 @@
-<?php
+ <?php
 include('layout/header.php');
 include('layout/navbar.php');
 include('layout/sidebar.php');
@@ -52,6 +52,11 @@ include('layout/sidebar.php');
                     <div class="col-sm-4">
                         <input type="text" placeholder="Masukkan Nama Mobil" name="vehicletitle" class="form-control" required>
                     </div>
+
+                     <!-- insert id pengelola --->
+                        <input type="hidden" value="<?php echo $_SESSION['id_pengelola']; ?>" placeholder="Masukkan Nama Mobil" name="id_pengelola" class="form-control" required>
+                    <!-- insert id pengelola --->
+                    
                     <label class="col-sm-2 control-label">Pilih Merek<span style="color:red">*</span></label>
                     <div class="col-sm-4">
                         <select class="form-control" name="brandname" required="" data-parsley-error-message="Field ini harus diisi" >

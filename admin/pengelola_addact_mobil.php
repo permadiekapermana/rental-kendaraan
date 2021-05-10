@@ -4,7 +4,7 @@ error_reporting(0);
 $vehicletitle=$_POST['vehicletitle'];
 $brand=$_POST['brandname'];
 $nopol=$_POST['nopol'];
-$id_pengelola=$_SESSION['id_pengelola'];
+$id_pengelola=$_POST['id_pengelola'];
 $id_kategori=$_POST['id_kategori'];
 $vehicleoverview=$_POST['vehicalorcview'];
 $priceperday=$_POST['priceperday'];
