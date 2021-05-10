@@ -39,9 +39,9 @@
                   <li><a><i class="fa fa-money"></i> Data Sewa Mobil <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="sewa_bayar.php">Menunggu Pembayaran</a></li>
-                      <li><a href="index2.html">Menunggu Konfirmasi</a></li>
-                      <li><a href="index3.html">Pengembalian</a></li>
-                      <li><a href="index3.html">Data Sewa</a></li>
+                      <li><a href="sewa_konfirmasi.php">Menunggu Konfirmasi</a></li>
+                      <li><a href="sewa_kembali.php">Pengembalian</a></li>
+                      <li><a href="sewa.php">Data Sewa</a></li>
                     </ul>
                   </li>
                   <li><a href="pengelola_biaya_driver.php"><i class="fa fa-money"></i> Biaya Driver</a></li>
