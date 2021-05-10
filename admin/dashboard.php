@@ -50,7 +50,9 @@ include('layout/sidebar.php');
                 <div class="card">
                 <div class="card-body">
                     <?php 
-                        $sqlbayar = "SELECT kode_booking FROM booking WHERE status='Menunggu Pembayaran'";
+                        $sqlbayar = "SELECT booking.kode_booking FROM booking  INNER JOIN mobil ON booking.id_mobil=mobil.id_mobil
+                        INNER JOIN pengelola ON mobil.id_pengelola=pengelola.id_pengelola
+                        WHERE mobil.id_pengelola='$_SESSION[id_pengelola]' AND booking.status='Menunggu Pembayaran'";
                         $querybayar = mysqli_query($koneksidb,$sqlbayar);
                         $bayar=mysqli_num_rows($querybayar);
                     ?>
@@ -64,7 +66,9 @@ include('layout/sidebar.php');
                 <div class="card">
                 <div class="card-body">
                     <?php 
-                        $sqlkonfir = "SELECT kode_booking FROM booking WHERE status='Menunggu Konfirmasi'";
+                        $sqlkonfir = "SELECT booking.kode_booking FROM booking INNER JOIN mobil ON booking.id_mobil=mobil.id_mobil
+                        INNER JOIN pengelola ON mobil.id_pengelola=pengelola.id_pengelola
+                        WHERE mobil.id_pengelola='$_SESSION[id_pengelola]' AND booking.status='Menunggu Konfirmasi'";
                         $querykonfir = mysqli_query($koneksidb,$sqlkonfir);
                         $konfir=mysqli_num_rows($querykonfir);
                     ?>
@@ -78,7 +82,9 @@ include('layout/sidebar.php');
                 <div class="card">
                 <div class="card-body">
                     <?php 
-                        $sqlbelum = "SELECT kode_booking FROM booking WHERE status='Sudah Dibayar'";
+                        $sqlbelum = "SELECT booking.kode_booking FROM booking INNER JOIN mobil ON booking.id_mobil=mobil.id_mobil
+                        INNER JOIN pengelola ON mobil.id_pengelola=pengelola.id_pengelola
+                        WHERE mobil.id_pengelola='$_SESSION[id_pengelola]' AND booking.status='Sudah Dibayar'";
                         $querybelum = mysqli_query($koneksidb,$sqlbelum);
                         $belum=mysqli_num_rows($querybelum);
                     ?>
@@ -95,7 +101,7 @@ include('layout/sidebar.php');
                 <div class="card">
                 <div class="card-body">
                     <?php 
-                        $sql1 = "SELECT id_mobil FROM mobil";
+                        $sql1 = "SELECT id_mobil FROM mobil WHERE id_pengelola='$_SESSION[id_pengelola]'";
                         $query1 = mysqli_query($koneksidb,$sql1);
                         $totalvehicle=mysqli_num_rows($query1);
                     ?>
@@ -109,7 +115,9 @@ include('layout/sidebar.php');
                 <div class="card">
                 <div class="card-body">
                     <?php 
-                        $sql2 = "SELECT kode_booking FROM booking";
+                        $sql2 = "SELECT booking.kode_booking FROM booking INNER JOIN mobil ON booking.id_mobil=mobil.id_mobil
+                                INNER JOIN pengelola ON mobil.id_pengelola=pengelola.id_pengelola
+                                WHERE mobil.id_pengelola='$_SESSION[id_pengelola]'";
                         $query2 = mysqli_query($koneksidb,$sql2);
                         $bookings=mysqli_num_rows($query2);
                     ?>

@@ -64,7 +64,7 @@ include('layout/sidebar.php');
                 <tbody>
                 <?php
                     $i=0;
-                    $sqlsewa = "SELECT booking.*,mobil.*,merek.*,users.* FROM booking,mobil,merek,users WHERE booking.id_mobil=mobil.id_mobil AND merek.id_merek=mobil.id_merek AND users.email=booking.email AND status='Menunggu Pembayaran' ORDER BY booking.kode_booking DESC";
+                    $sqlsewa = "SELECT booking.*,mobil.*,merek.*,users.* FROM booking,mobil,merek,users WHERE mobil.id_pengelola='$_SESSION[id_pengelola]' AND booking.id_mobil=mobil.id_mobil AND merek.id_merek=mobil.id_merek AND users.email=booking.email AND status='Menunggu Pembayaran' ORDER BY booking.kode_booking DESC";
                     $querysewa = mysqli_query($koneksidb,$sqlsewa);
                     while ($result = mysqli_fetch_array($querysewa)) {
                     $biayamobil=$result['durasi']*$result['harga'];
