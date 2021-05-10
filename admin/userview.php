@@ -4,7 +4,7 @@
 <?php
 session_start();
 error_reporting(0);
-include('includes/config.php');
+include('../includes/config.php');
 if($_GET) {
 	$Kode = $_GET['code'];
 	$mySql ="SELECT * FROM users WHERE email ='$Kode'";
@@ -25,8 +25,8 @@ else {
 	<h2>Detail Member</h2>
 </div>
 <div class="modal-header">
-	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-	<h4 class="modal-title" id="myModalLabel">Detail Member</h4>
+	<!-- <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+	<h4 class="modal-title" id="myModalLabel">Detail Member</h4> -->
 </div>
 <div><br/></div>
 <form id="theform" data-parsley-validate class="form-horizontal form-label-left" action="<?php $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">

@@ -4,9 +4,9 @@
 <?php
 session_start();
 error_reporting(0);
-include('includes/config.php');
-include('includes/format_rupiah.php');
-include('includes/library.php');
+include('../includes/config.php');
+include('../includes/format_rupiah.php');
+include('../includes/library.php');
 if($_GET) {
 	$Kode = $_GET['code'];
 	$sqlsewa = "SELECT booking.*,mobil.*,merek.*,users.* FROM booking,mobil,merek,users WHERE booking.id_mobil=mobil.id_mobil
@@ -31,8 +31,8 @@ else {
 	<h2>Detail Sewa</h2>
 </div>
 <div class="modal-header">
-	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-	<h4 class="modal-title" id="myModalLabel">Detail Sewa</h4>
+	<!-- <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+	<h4 class="modal-title" id="myModalLabel">Detail Sewa</h4> -->
 </div>
 <div><br/></div>
 <table width="100%">
