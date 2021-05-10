@@ -45,5 +45,31 @@
     <!-- Custom Theme Scripts -->
     <script src="build/js/custom.min.js"></script>
 
+    <script>
+		var app = {
+			code: '0'
+		};
+		$('[data-load-code]').on('click',function(e) {
+					e.preventDefault();
+					var $this = $(this);
+					var code = $this.data('load-code');
+					if(code) {
+						$($this.data('remote-target')).load('sewaview.php?code='+code);
+						app.code = code;
+						
+					}
+		});
+		$('[data-load-id]').on('click',function(e) {
+					e.preventDefault();
+					var $this = $(this);
+					var code = $this.data('load-id');
+					if(code) {
+						$($this.data('remote-target')).load('userview.php?code='+code);
+						app.code = code;
+						
+					}
+		});
+    </script>
+
   </body>
 </html>

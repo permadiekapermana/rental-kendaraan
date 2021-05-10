@@ -38,14 +38,14 @@
                   <li><a href="pengelola_view_mobil.php"><i class="fa fa-car"></i> Data Mobil</a></li>
                   <li><a><i class="fa fa-money"></i> Data Sewa Mobil <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Menunggu Pembayaran</a></li>
+                      <li><a href="sewa_bayar.php">Menunggu Pembayaran</a></li>
                       <li><a href="index2.html">Menunggu Konfirmasi</a></li>
                       <li><a href="index3.html">Pengembalian</a></li>
                       <li><a href="index3.html">Data Sewa</a></li>
                     </ul>
                   </li>
                   <li><a href="pengelola_biaya_driver.php"><i class="fa fa-money"></i> Biaya Driver</a></li>
-                  <li><a href="?module=dashboard"><i class="fa fa-file"></i> Laporan</a></li>
+                  <li><a href="laporan.php"><i class="fa fa-file"></i> Laporan</a></li>
                   <?php
                   }
                   ?>                  
