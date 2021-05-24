@@ -36,7 +36,22 @@ $pickup=$_POST['pickup'];
 $vid=$_POST['vid'];
 $email=$_POST['email'];
 $biayadriver=$_POST['biayadriver'];
-$kode = buatKode("booking", "TRX");
+// $kode = buatKode("booking", "TRX");
+
+$pel="TRX";
+$y=substr($pel,0,3);
+$sql="select * from booking where substr(kode_booking,1,3)='$y' order by kode_booking desc limit 0,1";
+$query=mysqli_query($koneksidb,$sql);
+$row=mysqli_num_rows($query);
+$data=mysqli_fetch_array($query);
+if ($row>0){
+$no=substr($data['kode_booking'],-5)+1;}
+else{
+$no=1;
+}
+$nourut=100000+$no;
+$kode=$pel.substr($nourut,-5);
+
 $status = "Menunggu Pembayaran";
 $bukti = "";
 $cek=0;
