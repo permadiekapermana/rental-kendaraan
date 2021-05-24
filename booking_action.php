@@ -1,25 +1,31 @@
 <?php
 
-$mobilenumber=$_POST['mobilenumber'];
-$fullname=$_POST['fullname']
-$arr=json_encode(array(
-	"phone"=>"$mobilenumber",
-	"body"=>"terimakasih Tuan $fullname",
+session_start();
+error_reporting(0);
+include('includes/config.php');
+include('includes/format_rupiah.php');
+include('includes/library.php');
+
+// $mobilenumber=$_POST['mobilenumber'];
+// $fullname=$_POST['fullname'];
+// $arr=json_encode(array(
+// 	"phone"=>"$mobilenumber",
+// 	"body"=>"terimakasih Tuan $fullname",
 	
-));
-$url="https://api.chat-api.com/instance237323/message?token=iyweuftjamxe823j";
-$ch=curl_init();
-curl_setopt($ch,CURLOPT_URL,$url);
-curl_setopt($ch,CURLOPT_POST,true);
-curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-curl_setopt($ch,CURLOPT_POSTFIELDS,$arr);
-curl_setopt($ch,CURLOPT_HTTPHEADER,array(
-	'Content-type:application/json',
-	'Content-length:'.strlen($arr)
-));
-$result=curl_exec($ch);
-curl_close($ch);
-echo $result;
+// ));
+// $url="https://api.chat-api.com/instance237323/message?token=iyweuftjamxe823j";
+// $ch=curl_init();
+// curl_setopt($ch,CURLOPT_URL,$url);
+// curl_setopt($ch,CURLOPT_POST,true);
+// curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+// curl_setopt($ch,CURLOPT_POSTFIELDS,$arr);
+// curl_setopt($ch,CURLOPT_HTTPHEADER,array(
+// 	'Content-type:application/json',
+// 	'Content-length:'.strlen($arr)
+// ));
+// $result=curl_exec($ch);
+// curl_close($ch);
+// echo $result;
 
 
 	
