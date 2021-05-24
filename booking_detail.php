@@ -121,11 +121,11 @@ $tglhasil = date("Y-m-d",$tgl);
 				<input type="text" class="form-control" name="total" value="<?php echo format_rupiah($totalsewa);?>"readonly>
             </div>
 			<?php if($result['status']=="Menunggu Pembayaran"){
-				$sqlrek 	= "SELECT * FROM tblpages WHERE id='5'";
+				$sqlrek 	= "SELECT * FROM mobil INNER JOIN pengelola ON mobil.id_pengelola=pengelola.id_pengelola WHERE id_mobil='$result[id_mobil]'";
 				$queryrek = mysqli_query($koneksidb,$sqlrek);
 				$resultrek = mysqli_fetch_array($queryrek);
 				?>
-			<b>*Silahkan transfer total biaya sewa ke <?php echo $resultrek['detail'];?> maksimal tanggal <?php echo IndonesiaTgl($tglhasil);?>.
+			<b>*Silahkan transfer total biaya sewa ke Nomor Rekening <?php echo $resultrek['norek'];?> Bank <?php echo $resultrek['bank'];?> a/n <?php echo $resultrek['nama'];?>  maksimal tanggal <?php echo IndonesiaTgl($tglhasil);?>.
 			<?php
 			}else{
 				
